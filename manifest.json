@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Waterfy",
+    "version": "1.0",
+    "description": "Water reminder for your browser",
+    "permissions": ["activeTab", "storage"],
+    "action": {
+      "default_icon": "./img/water_bottle.jpg",
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "service_worker.js",
+      "type": "module"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["popup.css"]
+      }
+    ]
+  }
+
+  
+  
